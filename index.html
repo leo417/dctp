@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDACTR</title>
+    <meta name="REDACTR" content="01 - Phonie: Identify the telecoms carrier from a phone number" >
+    <script type="text/javascript" src="index.js" defer></script>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+    <section id="banner">
+        <div class="" id="">
+    </section>
+
+    <section id="heading">
+        <h1>REDACTR</h1>
+    </section>
+    
+    <section id="textInput">
+        <label for="message" id="messageLabel">Message: </label>
+        <textarea id="message" name="message" placeholder="Enter your message..." rows="8" spellcheck="true" wrap="soft" autofocus></textarea>
+    </section>
+
+    <section id="redactSettings" class="wrapper">
+        <p class="one">Enter <strong>the word</strong> or <strong>list of words</strong> separated by commas, you want to <strong>redact</strong>.</p>
+        <textarea class="three" id="redactStr" placeholder="Enter words to redact..." spellcheck="true" wrap="soft" autofocus></textarea>
+            
+            <div  class="two" id="toggle" class="btns">
+                <label class="switch">Redact
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+                <div class="four">
+                    <label class="btns" id="redactLabel" for="redactType" >Please Select Redact Type </label>
+                    <select id="redactType">
+                        <option value="none">none</option>
+                        <option value="...">Ellipsis</option>
+                        <option value="---">Dash</option>
+                        <option value="___">Underscore</option>
+                        <option value="***">Asterisk</option>
+                        <option value="???">Question mark</option>
+                        <option value="blur">Blur</option>
+                    </select>
+                </div>
+        </div>
+    </section>
+
+    <!-- <div id="redactButtons">
+        <button id="redactBtn">REDACT</button>
+    
+        <div class="2" id="toggle" class="btns">
+            <label class="switch 3">Redact
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    
+        <div id="type" class="btns">
+            <label id="redactLabel" for="redactType">Please Select Redact Type </label>
+            <select id="redactType">
+                <option value="none">none</option>
+                <option value="...">Ellipsis</option>
+                <option value="---">Dash</option>
+                <option value="___">Underscore</option>
+                <option value="***">Asterisk</option>
+                <option value="???">Question mark</option>
+                <option value="blur">Blur</option>
+            </select>
+        </div>
+    </div> -->
+
+
+    <section id="response">
+        <label for="redactedMsg" id="redactResponseLabel">Redacted Message: </label>
+        <p id="redactedMsg"></p>
+    </section>
+
+
+</body>
+</html>
