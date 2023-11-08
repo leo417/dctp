@@ -59,13 +59,7 @@ p {
         /* Standard syntax */
 }
 
-label {
-    /* padding: 10px;
-    font-size: 25px; */
-}
-
 textarea {
-    /* border: 20cm; */
     padding: 10px;
     border-width: 2px 4px 4px 2px;
     margin: 10px 10px;
@@ -74,38 +68,32 @@ textarea {
 
 
 #textInput {
-    /* display: flex; */
     position: relative;
     align-items: center;
-    /* max-width: 90%; */
     max-height: 300px;
-    /* width: 80%; */
-
 }
 
 #messageLabel{
     position: absolute;
     top: 0.2ex;
-  z-index: 1;
-  left: 2em;
-  background-color: white;
-  padding: 0 5px;
-
+    z-index: 1;
+    left: 2em;
+    background-color: white;
+    padding: 0 5px;
 }
 
 #redactResponseLabel {
     position: absolute;
-        top: -1ex;
-        z-index: 1;
-        left: 1em;
-        background-color: white;
-        padding: 0 5px;
+    top: -1ex;
+    z-index: 1;
+    left: 1em;
+    background-color: white;
+    padding: 0 5px;
 }
 
 #message {
     width: 100%;
     max-height: 100%;
-    /* resize: vertical; */
 }
 
 #redactedMsg {
@@ -114,10 +102,7 @@ textarea {
 }
 
 #redactSettings {
-    /* display: flex; */
     align-items: center;
-    /* max-width: 800px;
-    width: 80%; */
 }
 
 #redactStr {
@@ -125,18 +110,11 @@ textarea {
 }
 
 .btns {
-    /* display:inline-flex; */
-    /* width: 100%; */
     cursor:  pointer;
     background-color: black;
     color: white;
     padding: 5px;
     margin: 20px;
-}
-
-#redactType {
-    /* margin: 0 10px;
-    width: 80% ; */
 }
 
 select {
@@ -146,70 +124,7 @@ select {
 #response {
     position: relative;
     border: dashed 2px black;
-    /* width: 100%;
-    max-width: 800px; */
-    /* border-width: 2 px; */
     border-style: groove;
     margin: 10px;
     margin-top: 40px;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: black;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px black;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
