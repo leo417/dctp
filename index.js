@@ -27,6 +27,7 @@ function redact() {
     
     // Message input box blue confirmation chaage 
     else {
+        msg = message.value;
         message.style.borderBlockColor = 'blue';
         // Create array of words from redact words
     arrayOfRedactWords = redactionString.split(',').map((word) => word.trim());
