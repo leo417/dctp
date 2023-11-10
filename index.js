@@ -10,6 +10,8 @@ function redact() {
     var redactedMsg = document.getElementById("redactedMsg");
     // Store words to be redacted
     const redactionString= document.getElementById("redactStr").value;
+    // temp message variable
+    var msg = '';
 
     // If message is empty dispaly message, box error color change, end function 
     if (!message.value)  {
@@ -31,26 +33,26 @@ function redact() {
 
      // Loop through redact words and modify the input message, redacting where necessary
     for (word of arrayOfRedactWords) {
-        console.log(word);
         
         // Regex based on redact words with boundary condition to exclude false matches
         var regex = new RegExp(`(?:[".(_*-]|\\b)${word}(?:[".(_*-]|\\b)`, "gim");
         
         // Blur replacemenet with a span
         if (redactTypeSelect.value == 'blur') {
-            redactedMsg.innerHTML = message.value.replaceAll(regex, `<span id='filter'>${word}</span>`);
+            msg = msg.replaceAll(regex, `<span id='filter'>${word}</span>`);
         } 
         else if (redactTypeSelect.value == 'none') {
-            redactedMsg.innerHTML = message.value;
+            msg = message.value;
         } 
         else if (!redactTypeSelect.value) {
-            return ;
+            return ; 
         }
         // All other types of redact methods
         else {
-            redactedMsg.innerHTML = message.value.replaceAll(regex, redactTypeSelect.value);            
+            msg = msg.replaceAll(regex, redactTypeSelect.value);            
         }
     }
+    redactedMsg.innerHTML = msg;
 }
     return ;
 }
